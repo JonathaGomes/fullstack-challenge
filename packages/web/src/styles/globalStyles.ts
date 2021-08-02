@@ -2,13 +2,13 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
 	:root {
-		--background: #F0F2F5;
-		--red: #E52E40;
+		--background: #FDFCFC;
+		--red: #FF6978;
 		--blue: #5429CC;
 		--blue-light: #6933FF;
 		--text-ligth: #363F5F;
 		--text-body: #969CB3;
-		--shape: #FFF;
+		--shape: #FFFCF9;
 	}
 	* {
 		margin: 0;
@@ -46,6 +46,7 @@ export const GlobalStyles = createGlobalStyle`
 	}
 	button {
 		cursor: pointer;
+		border: none;
 	}
 	[disabled] {
 		opacity: 0.5;

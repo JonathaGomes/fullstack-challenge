@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Link from "next/link";
 import { BiHomeAlt, BiPlus, BiUser } from "react-icons/bi";
 import {
@@ -27,7 +26,7 @@ export function NavigationBar({ activeItem }: NavigationBarProps) {
           <Link href="/add/book" passHref>
             <NavLink isActive={activeItem === 2}>
               <BiPlus />
-              <p>Add Boo</p>
+              <p>Add Book</p>
             </NavLink>
           </Link>
         </div>

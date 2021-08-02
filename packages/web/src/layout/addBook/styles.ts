@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const AddBookContainer = styled.main`
-  height: calc(100vh - 3.75rem);
+  min-height: 100vh;
   width: 100%;
   background: var(--shape);
 `;

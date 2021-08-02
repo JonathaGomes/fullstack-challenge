@@ -1,35 +1,42 @@
 import { useState } from "react";
 import Link from "next/link";
 import { BiHomeAlt, BiPlus, BiUser } from "react-icons/bi";
-import { NavigationBarContainer, NavigationBarContent } from "./styles";
+import {
+  NavigationBarContainer,
+  NavigationBarContent,
+  NavLink,
+} from "./styles";
 
-export function NavigationBar() {
-  const [isActive, setIsActive] = useState(1);
+type NavigationBarProps = {
+  activeItem: number;
+};
+
+export function NavigationBar({ activeItem }: NavigationBarProps) {
   return (
     <NavigationBarContainer>
       <NavigationBarContent>
         <div>
-          <Link href="/">
-            <a style={{ color: isActive === 1 ? "#313131" : "#bfbebf" }}>
+          <Link href="/" passHref>
+            <NavLink isActive={activeItem === 1}>
               <BiHomeAlt />
               <p>Home</p>
-            </a>
+            </NavLink>
           </Link>
         </div>
         <div>
-          <Link href="/add/book">
-            <a style={{ color: isActive === 2 ? "#313131" : "#bfbebf" }}>
+          <Link href="/add/book" passHref>
+            <NavLink isActive={activeItem === 2}>
               <BiPlus />
               <p>Add Boo</p>
-            </a>
+            </NavLink>
           </Link>
         </div>
         <div>
-          <Link href="/settings/profile">
-            <a style={{ color: isActive === 3 ? "#313131" : "#bfbebf" }}>
+          <Link href="/profile" passHref>
+            <NavLink isActive={activeItem === 3}>
               <BiUser />
               <p>Profile</p>
-            </a>
+            </NavLink>
           </Link>
         </div>
       </NavigationBarContent>

@@ -9,6 +9,7 @@ export function HomePage() {
       <Head>
         <title>Home Page | Book App</title>
       </Head>
+      a
       <NavigationBar activeItem={1} />
     </HomePageContainer>
   );

@@ -11,8 +11,9 @@ const textCentered = css`
 `;
 
 export const NavigationBarContainer = styled.div`
-  position: sticky;
+  position: fixed;
   bottom: 0;
+  /*top: 0;*/
   width: 100%;
   height: 3.75rem;
   background-color: #fff;

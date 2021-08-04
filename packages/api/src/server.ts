@@ -70,33 +70,6 @@ const books = [
     thumbnail:
       "https://images-na.ssl-images-amazon.com/images/S/pv-target-images/f95646dcdb2aaa3bad942f4ebed1ecbc579deea649ecc3faa92486e87f8324fc._RI_V_TTW_.jpg",
   },
-  {
-    id: "72XnPAAACAAJ",
-    title: "The Lord of the Rings 7",
-    author: "J. R. R. Tolkien",
-    description:
-      "O Senhor dos Anéis é um livro de alta fantasia, escrito pelo escritor britânico J. R. R. Tolkien. Escrita entre 1937 e 1949, com muitas partes criadas durante a Segunda Guerra Mundial, a saga é uma continuação de O Hobbit.",
-    thumbnail:
-      "https://images-na.ssl-images-amazon.com/images/S/pv-target-images/f95646dcdb2aaa3bad942f4ebed1ecbc579deea649ecc3faa92486e87f8324fc._RI_V_TTW_.jpg",
-  },
-  {
-    id: "82XnPAAACAAJ",
-    title: "The Lord of the Rings 8",
-    author: "J. R. R. Tolkien",
-    description:
-      "O Senhor dos Anéis é um livro de alta fantasia, escrito pelo escritor britânico J. R. R. Tolkien. Escrita entre 1937 e 1949, com muitas partes criadas durante a Segunda Guerra Mundial, a saga é uma continuação de O Hobbit.",
-    thumbnail:
-      "https://images-na.ssl-images-amazon.com/images/S/pv-target-images/f95646dcdb2aaa3bad942f4ebed1ecbc579deea649ecc3faa92486e87f8324fc._RI_V_TTW_.jpg",
-  },
-  {
-    id: "92XnPAAACAAJ",
-    title: "The Lord of the Rings 9",
-    author: "J. R. R. Tolkien",
-    description:
-      "O Senhor dos Anéis é um livro de alta fantasia, escrito pelo escritor britânico J. R. R. Tolkien. Escrita entre 1937 e 1949, com muitas partes criadas durante a Segunda Guerra Mundial, a saga é uma continuação de O Hobbit.",
-    thumbnail:
-      "https://images-na.ssl-images-amazon.com/images/S/pv-target-images/f95646dcdb2aaa3bad942f4ebed1ecbc579deea649ecc3faa92486e87f8324fc._RI_V_TTW_.jpg",
-  },
 ];
 
 app.get("/books", (request, response) => {

@@ -17,7 +17,7 @@ export function NavigationBar({ activeItem }: NavigationBarProps) {
         <div>
           <Link href="/" passHref>
             <NavLink isActive={activeItem === 1}>
-              <BiHomeAlt />
+              <BiHomeAlt size="22" />
               <p>Home</p>
             </NavLink>
           </Link>
@@ -25,7 +25,7 @@ export function NavigationBar({ activeItem }: NavigationBarProps) {
         <div>
           <Link href="/add/book" passHref>
             <NavLink isActive={activeItem === 2}>
-              <BiPlus />
+              <BiPlus size="22" />
               <p>Add Book</p>
             </NavLink>
           </Link>
@@ -33,7 +33,7 @@ export function NavigationBar({ activeItem }: NavigationBarProps) {
         <div>
           <Link href="/profile" passHref>
             <NavLink isActive={activeItem === 3}>
-              <BiUser />
+              <BiUser size="22" />
               <p>Profile</p>
             </NavLink>
           </Link>

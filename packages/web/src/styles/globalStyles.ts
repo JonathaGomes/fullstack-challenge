@@ -28,12 +28,33 @@ export const GlobalStyles = createGlobalStyle`
 	body {
 		-webkit-font-smoothing: antialiased;
 	}
+
+	@font-face {
+		font-family: "SF Pro Display";
+		src: url("/fonts/FontsFree-Net-SFProDisplay-Regular.ttf");
+		font-style: normal;
+		font-weight: 400;
+		font-display: swap;
+	}
+	@font-face {
+		font-family: "SF Pro Display";
+		src: url("/fonts/FontsFree-Net-SFProDisplay-Semibold.ttf");
+		font-style: medium;
+		font-weight: 600;
+		font-display: swap;
+	}
+	@font-face {
+		font-family: "SFProText";
+		src: url("/fonts/SF-Pro-Text-Regular.otf");
+		font-style: normal;
+		font-weight: 400;
+		font-display: swap;
+	}
 	body,
 	input,
 	textarea,
 	button {
-		font-family: "Poppins", sans-serif;
-		font-weight: 400;
+		font-family: "SF Pro Display", sans-serif;
 	}
 	h1,
 	h2,
@@ -56,5 +77,9 @@ export const GlobalStyles = createGlobalStyle`
 	a {
 		text-decoration: none;
 		color: inherit;
+	}
+
+	span {
+		font-weight: 400;
 	}
 `;

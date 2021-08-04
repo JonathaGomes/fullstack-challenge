@@ -25,7 +25,7 @@ export const NavigationBarContent = styled.nav`
 
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 
   div {
@@ -39,6 +39,7 @@ export const NavLink = styled.a<NavLinkProps>`
   ${textCentered}
   gap: 0.325rem;
   transition: color 0.3s;
+  font-size: 0.75rem;
 
   color: ${({ isActive }) => (isActive ? "#313131" : "#bfbebf")};
 

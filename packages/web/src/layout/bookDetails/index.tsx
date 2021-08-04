@@ -1,6 +1,16 @@
 import Link from "next/link";
 import Head from "next/head";
 import Image from "next/image";
+import { BiBookOpen } from "react-icons/bi";
+import { RiHeadphoneFill } from "react-icons/ri";
+import { IoShareOutline } from "react-icons/io5";
+import {
+  BookDetailsContainer,
+  BookDetailsContent,
+  BookCover,
+  ArrowBack,
+  BookDetailsBar,
+} from "./styles";
 
 type BookProps = {
   id: string;
@@ -16,19 +26,50 @@ type Book = {
 
 export function BookDetails({ book }: Book) {
   return (
-    <div>
+    <BookDetailsContainer>
       <Head>
         <title>{book.title} | Página não encontrada</title>
       </Head>
-      <div key={book.id}>
-        <h2>{book.title}</h2>
-        <p>{book.author}</p>
+
+      <section>
+        <ArrowBack>
+          <Link href="/">
+            <a>
+              <Image height={16} width={16} src={"/back.svg"} alt={"Voltar"} />
+            </a>
+          </Link>
+        </ArrowBack>
+        <BookCover>
+          <Image
+            width={160}
+            height={230}
+            src={book.thumbnail}
+            alt={book.title}
+          />
+        </BookCover>
+      </section>
+      <BookDetailsContent>
+        <h1>{book.title}</h1>
+        <h2>{book.author}</h2>
         <p>{book.description}</p>
-        <Image width={100} height={200} src={book.thumbnail} alt={book.title} />
-      </div>
-      <Link href="/">
-        <a>Go Home</a>
-      </Link>
-    </div>
+      </BookDetailsContent>
+      <BookDetailsBar>
+        <Link href="/">
+          <a>
+            <BiBookOpen size="18" color="#CFCBD2" /> Read
+          </a>
+        </Link>
+        <Link href="/">
+          <a>
+            <RiHeadphoneFill size="18" color="#CFCBD2" /> Listen
+          </a>
+        </Link>
+        <Link href="/">
+          <a>
+            <IoShareOutline size="18" color="#CFCBD2" /> Share
+          </a>
+        </Link>
+      </BookDetailsBar>
+    </BookDetailsContainer>
   );
 }

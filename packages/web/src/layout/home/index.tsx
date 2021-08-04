@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { NavigationBar } from "@/common";
 import Head from "next/head";
-import { VscSearch } from "react-icons/vsc";
 import Image from "next/image";
 import Link from "next/link";
 import api from "@/services/api";

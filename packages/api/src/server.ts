@@ -115,6 +115,6 @@ app.get("/books/:id", (request, response) => {
   return response.json(book);
 });
 
-app.listen(3333, () => {
+app.listen(process.env.PORT || 3333, () => {
   console.log("server is running");
 });

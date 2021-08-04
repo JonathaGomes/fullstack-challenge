@@ -22,8 +22,10 @@ export const HomePageContent = styled.div`
   }
 `;
 
-export const SearchInput = styled.div`
+export const SearchInput = styled.form`
+  position: relative;
   padding-top: 3.125rem;
+
   input {
     height: 3rem;
     width: 100%;
@@ -35,6 +37,25 @@ export const SearchInput = styled.div`
     font-size: 1.2rem;
     margin-top: 0.625rem;
     background: #fdfcfc;
+    border: 1px solid #fdfcfc;
+    padding-left: 2.8rem;
+
+    &:focus {
+      border: 1px solid var(--red);
+    }
+
+    &::placeholder {
+      color: #54565a;
+      font-size: 1rem;
+    }
+  }
+
+  div {
+    position: absolute;
+    bottom: 0.5rem;
+    left: 0.5rem;
+    height: 1rem;
+    width: 1rem;
   }
 `;
 

@@ -37,7 +37,14 @@ export function HomePage() {
           <title>Home Page | Book App</title>
         </Head>
         <SearchInput>
-          {/*<VscSearch />*/}
+          <div>
+            <Image
+              height={16}
+              width={16}
+              src={"/lupa.png"}
+              alt={"Search book"}
+            />
+          </div>
           <input type="text" placeholder="Search book" />
         </SearchInput>
         <h1>

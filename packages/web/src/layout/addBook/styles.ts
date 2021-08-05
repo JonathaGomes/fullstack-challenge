@@ -36,7 +36,11 @@ export const AddBookContent = styled.div`
       width: 100%;
       border: none;
       border-radius: 10px;
-      box-shadow: 5px 5px 80px rgba(212, 173, 134, 0.5);
+      ${({ theme }) =>
+        theme.title === "light" &&
+        css`
+          box-shadow: 5px 5px 80px rgba(212, 173, 134, 0.5);
+        `};
       outline: 0;
       padding-left: 1rem;
       font-size: 1.2rem;
@@ -75,7 +79,11 @@ export const AddBookContent = styled.div`
       color: ${theme.colors.colorTextButton};
       transition: filter 0.3s;
 
-      box-shadow: 5px 5px 80px rgba(212, 173, 134, 0.5);
+      ${({ theme }) =>
+        theme.title === "light" &&
+        css`
+          box-shadow: 5px 5px 80px rgba(212, 173, 134, 0.5);
+        `};
       &:hover {
         filter: brightness(0.8);
       }

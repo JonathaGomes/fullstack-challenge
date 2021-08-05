@@ -16,7 +16,7 @@ export const NavigationBarContainer = styled.div`
   /*top: 0;*/
   width: 100%;
   height: 3.75rem;
-  background-color: #fff;
+  background-color: ${({ theme }) => theme.colors.navDetailsBackground};
 `;
 
 export const NavigationBarContent = styled.nav`
@@ -41,9 +41,11 @@ export const NavLink = styled.a<NavLinkProps>`
   transition: color 0.3s;
   font-size: 0.75rem;
 
-  color: ${({ isActive }) => (isActive ? "#313131" : "#bfbebf")};
+  color: ${({ theme }) => theme.colors.textPrimary};
+
+  opacity: ${({ isActive }) => (isActive ? 1 : 0.4)};
 
   &:hover {
-    color: #313131 !important;
+    color: ${({ theme }) => theme.colors.textPrimary} !important;
   }
 `;

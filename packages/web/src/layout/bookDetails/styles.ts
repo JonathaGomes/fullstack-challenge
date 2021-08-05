@@ -1,45 +1,50 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const BookDetailsContainer = styled.div`
-  width: 100%;
-  background: #fffcf9;
-  section {
-    position: relative;
-    height: 17.5rem;
-    background-color: #fff6e5;
-    border-radius: 0 0 100px 0;
-    background-image: url("/oval-1.svg"), url("/oval-4.svg"), url("/oval-2.svg"),
-      url("/oval-3.svg"), url("/oval-5.svg");
-    background-repeat: no-repeat;
-    background-position: 125% -20%, 74% 95%, 72% 28%, 22% 53%, 11% 47%;
-  }
+  ${({ theme }) => css`
+    width: 100%;
+    min-height: 100vh;
+
+    background: ${theme.colors.background};
+    section {
+      position: relative;
+      height: 17.5rem;
+      background-color: ${theme.colors.backgroundBookDetails};
+      border-radius: 0 0 100px 0;
+      background-image: url("/oval-1.svg"), url("/oval-4.svg"),
+        url("/oval-2.svg"), url("/oval-3.svg"), url("/oval-5.svg");
+      background-repeat: no-repeat;
+      background-position: 125% -20%, 74% 95%, 72% 28%, 22% 53%, 11% 47%;
+    }
+  `};
 `;
 
 export const BookDetailsContent = styled.div`
-  width: 90%;
-  margin: 4.2rem auto 0;
+  ${({ theme }) => css`
+    width: 90%;
+    margin: 4.2rem auto 0;
+    h1 {
+      color: ${theme.colors.textPrimary};
+      font-size: 1.5rem;
+    }
 
-  h1 {
-    color: #36383a;
-    font-size: 1.5rem;
-  }
+    h2 {
+      margin-top: 0.5rem;
 
-  h2 {
-    margin-top: 0.5rem;
+      font-size: 1rem;
+      color: ${theme.colors.colorTitle};
+      font-weight: 600;
+    }
 
-    font-size: 1rem;
-    color: var(--red);
-    font-weight: 600;
-  }
-
-  p {
-    margin-top: 0.5rem;
-    font-family: "SFProText";
-    font-size: rrem;
-    color: #313131;
-    line-height: 1.5;
-    opacity: 0.5;
-  }
+    p {
+      margin-top: 0.5rem;
+      font-family: "SFProText";
+      font-size: 1rem;
+      color: ${theme.colors.textPrimary};
+      line-height: 1.5;
+      opacity: 0.5;
+    }
+  `};
 `;
 
 export const BookCover = styled.div`
@@ -60,6 +65,7 @@ export const ArrowBack = styled.div`
 `;
 
 export const BookDetailsBar = styled.div`
+  background: ${({ theme }) => theme.colors.navDetailsBackground};
   position: fixed;
   display: flex;
   left: 50%;
@@ -80,6 +86,7 @@ export const BookDetailsBar = styled.div`
     gap: 0.5rem;
     font-size: 1rem;
     font-weight: 700;
+    color: ${({ theme }) => theme.colors.textPrimary};
 
     & + a {
       padding-left: 1.625rem;

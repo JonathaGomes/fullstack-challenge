@@ -40,14 +40,14 @@ export function HomePage() {
             <Image
               height={16}
               width={16}
-              src={"/lupa.png"}
+              src={"/lupa.svg"}
               alt={"Search book"}
             />
           </div>
           <input type="text" placeholder="Search book" />
         </SearchInput>
         <h1>
-          <span>Hi</span>, Mehmed Al Fatih 👋
+          <span>Hi,</span> Mehmed Al Fatih 👋
         </h1>
         <BookContainer>
           {books.map((book) => {

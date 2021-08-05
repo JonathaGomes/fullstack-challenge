@@ -1,54 +1,58 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const HomePageContainer = styled.div`
-  height: calc(100vh - 3.75rem);
+  height: calc(100vh + 3.75rem);
 
   width: 100%;
-  background: #fffcf9;
+  background: ${({ theme }) => theme.colors.background};
 `;
 
 export const HomePageContent = styled.div`
   width: 90%;
   margin: 0 auto;
 
-  h1 {
-    margin-top: 1.875rem;
-    font-size: 1.5rem;
-    color: var(--red);
+  ${({ theme }) => css`
+    h1 {
+      margin-top: 1.875rem;
+      font-size: 1.5rem;
+      color: ${theme.colors.colorTitle};
 
-    span {
-      color: #54565a;
+      span {
+        color: ${theme.colors.textSecondary};
+      }
     }
-  }
+  `};
 `;
 
 export const SearchInput = styled.form`
   position: relative;
   padding-top: 3.125rem;
 
-  input {
-    height: 3rem;
-    width: 100%;
-    border: none;
-    border-radius: 10px;
-    box-shadow: 5px 5px 80px rgba(212, 173, 134, 0.1);
-    outline: 0;
-    padding-left: 1rem;
-    font-size: 1.2rem;
-    margin-top: 0.625rem;
-    background: #fdfcfc;
-    border: 1px solid #fdfcfc;
-    padding-left: 2.8rem;
+  ${({ theme }) => css`
+    input {
+      height: 3rem;
+      width: 100%;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 5px 5px 80px rgba(212, 173, 134, 0.1);
+      outline: 0;
+      padding-left: 1rem;
+      font-size: 1.2rem;
+      margin-top: 0.625rem;
+      background: ${theme.colors.backgroundInput};
+      border: 1.5px solid ${theme.colors.backgroundInput};
+      padding-left: 2.8rem;
 
-    &:focus {
-      border: 1px solid var(--red);
-    }
+      &:focus {
+        border: 1.5px solid ${theme.colors.colorTitle};
+      }
 
-    &::placeholder {
-      color: #54565a;
-      font-size: 1rem;
+      &::placeholder {
+        color: ${theme.colors.placeholder};
+        font-size: 1rem;
+      }
     }
-  }
+  `};
 
   div {
     position: absolute;
@@ -64,6 +68,7 @@ export const BookContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
+  color: ${({ theme }) => theme.colors.textSecondary};
 
   img {
     width: 6.5rem;

@@ -6,6 +6,7 @@ export const LoadingContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: var(--red);
+  color: ${({ theme }) => theme.colors.colorTitle};
+  background: ${({ theme }) => theme.colors.background};
   gap: 1.5rem;
 `;

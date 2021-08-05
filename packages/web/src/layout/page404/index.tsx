@@ -10,11 +10,12 @@ export function Page404() {
       <Head>
         <title>404 | Página não encontrada</title>
       </Head>
-      <h1>404</h1>
-      <h2>Page Not Found</h2>
-      <HiOutlineEmojiSad size="180px" />
+      <div>
+        <h1>404</h1>
+        <h2>Page not found</h2>
+      </div>
       <Link href="/">
-        <a>Go Home</a>
+        <a>Homepage</a>
       </Link>
     </Page404Container>
   );

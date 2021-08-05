@@ -9,29 +9,43 @@ export const Page404Container = styled.div`
   align-items: center;
   text-align: center;
   gap: 1rem;
-  color: #264372;
-  font-family: Roboto, sans-serif;
+  background-color: #030005;
 
   h1 {
-    font-size: 8rem;
+    font-size: 12rem;
+    font-family: montserrat, sans-serif;
+    font-weight: 900;
+    color: #030005;
+    text-transform: uppercase;
+    text-shadow: -1px -1px 0 #8400ff, 1px 1px 0 #ff005a;
+    letter-spacing: -20px;
   }
 
   h2 {
-    font-size: 2rem;
+    position: absolute;
+    top: 400px;
+    font-family: montserrat, sans-serif;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    color: #fff;
+    text-shadow: 0 2px 0 #8400ff;
+    letter-spacing: 13px;
+    margin: 0;
   }
 
   a {
+    font-family: montserrat, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.5rem;
     height: 3rem;
-    color: #fff;
+    color: #ff005a;
+    border: 2px solid;
     padding: 0 3rem;
-    background-color: #264372;
-    border-radius: 24px;
+    background-color: transparent;
+    font-size: 0.875rem;
     text-transform: uppercase;
-    font-weight: 500;
     transition: filter 0.3s;
 
     &:hover {

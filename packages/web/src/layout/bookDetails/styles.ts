@@ -68,7 +68,7 @@ export const BookDetailsBar = styled.div`
   align-items: center;
   justify-content: space-around;
   height: 3.5rem;
-  width: 21rem;
+  width: 23rem;
   border-radius: 4px;
   margin: 0 auto;
   box-shadow: 6px 6px 23px rgba(107, 103, 70, 0.2);

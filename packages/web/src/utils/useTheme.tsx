@@ -8,7 +8,6 @@ import {
   useState,
 } from "react";
 import { DefaultTheme, ThemeProvider } from "styled-components";
-import { getFromLS } from "./storage";
 import usePersistedState from "./usePersistedState";
 
 type ThemeContextData = {

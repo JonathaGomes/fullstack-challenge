@@ -1,7 +1,14 @@
 import dark from "@/styles/themes/dark";
 import light from "@/styles/themes/light";
-import { createContext, ReactNode, useContext } from "react";
+import {
+  createContext,
+  ReactNode,
+  useContext,
+  useEffect,
+  useState,
+} from "react";
 import { DefaultTheme, ThemeProvider } from "styled-components";
+import { getFromLS } from "./storage";
 import usePersistedState from "./usePersistedState";
 
 type ThemeContextData = {
@@ -17,6 +24,11 @@ export const ThemeContext = createContext({} as ThemeContextData);
 
 export function ThemeContextProvider({ children }: ThemeContextProviderProps) {
   const [theme, setTheme] = usePersistedState<DefaultTheme>("theme", light);
+  const [contextTheme, setContextTheme] = useState<DefaultTheme>(light);
+
+  useEffect(() => {
+    setContextTheme(theme);
+  }, [theme]);
 
   const toggleTheme = () => {
     setTheme(theme.title === "light" ? dark : light);
@@ -24,9 +36,7 @@ export function ThemeContextProvider({ children }: ThemeContextProviderProps) {
 
   return (
     <ThemeContext.Provider value={{ toggleTheme, theme }}>
-      <ThemeProvider theme={theme?.title === "light" ? light : dark}>
-        {children}
-      </ThemeProvider>
+      <ThemeProvider theme={contextTheme}>{children}</ThemeProvider>
     </ThemeContext.Provider>
   );
 }

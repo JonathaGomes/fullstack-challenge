@@ -16,7 +16,9 @@ export const NavigationBarContainer = styled.div`
   /*top: 0;*/
   width: 100%;
   height: 3.75rem;
-  background-color: ${({ theme }) => theme.colors.navDetailsBackground};
+  background-color: ${({ theme }) => theme.colors.background};
+  border-top: 1px solid ${({ theme }) => theme.colors.border};
+  padding: 0.2rem;
 `;
 
 export const NavigationBarContent = styled.nav`

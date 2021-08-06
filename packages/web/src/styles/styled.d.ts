@@ -16,6 +16,8 @@ declare module "styled-components" {
       navDetailsBackground: string;
       backgroundBookDetails: string;
       label: string;
+      border: string;
+      backgroundArrow: string;
     };
   }
 }

@@ -8,7 +8,7 @@ export function Page404() {
   return (
     <Page404Container>
       <Head>
-        <title>404 | Página não encontrada</title>
+        <title>404 | Page not found</title>
       </Head>
       <div>
         <h1>404</h1>

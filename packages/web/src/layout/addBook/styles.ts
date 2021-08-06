@@ -69,14 +69,14 @@ export const AddBookContent = styled.div`
     button {
       height: 3rem;
       width: 100%;
-      background: ${theme.colors.colorTitle};
       border-radius: 10px;
 
       margin: 2.375rem 0;
 
       font-size: 1.5rem;
+      color: #fff;
       font-weight: 600;
-      color: ${theme.colors.colorTextButton};
+      background: ${({ theme }) => theme.colors.backgroundButton};
       transition: filter 0.3s;
 
       ${({ theme }) =>

@@ -1,5 +1,5 @@
-import { Profile } from "@/layout/profile";
+import { ProfilePage } from "@/layout/profile";
 
 export default function Book() {
-  return <Profile />;
+  return <ProfilePage />;
 }

@@ -14,5 +14,7 @@ export default {
     navDetailsBackground: "#FFFFFF",
     backgroundBookDetails: "#FFF6E5",
     label: "#000",
+    border: "rgba(0, 0, 0, 0.5)",
+    backgroundArrow: "#aba9a5",
   },
 };

@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 
 export const AddBookContainer = styled.main`
-  height: calc(100vh - 3.75rem);
+  min-height: calc(100vh + 3.75rem);
   width: 100%;
   background: ${({ theme }) => theme.colors.background};
 `;
@@ -71,7 +71,7 @@ export const AddBookContent = styled.div`
       width: 100%;
       border-radius: 10px;
 
-      margin: 2.375rem 0;
+      margin: 2.375rem 0 6rem 0;
 
       font-size: 1.5rem;
       color: #fff;
@@ -95,4 +95,18 @@ export const MessageError = styled.p`
   margin-top: 0.5rem;
   color: ${({ theme }) => theme.colors.colorTitle};
   font-weight: bold;
+`;
+
+export const InputFileContainer = styled.div`
+  ${({ theme }) => css`
+    margin-top: 1rem;
+    height: 10rem;
+    width: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    border: 2px dashed ${theme.colors.colorTitle};
+    color: ${theme.colors.colorTitle};
+  `}
 `;

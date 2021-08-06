@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 
 export const HomePageContainer = styled.div`
-  height: calc(100vh + 3.75rem);
+  min-height: calc(100vh + 3.75rem);
 
   width: 100%;
   background: ${({ theme }) => theme.colors.background};
@@ -92,6 +92,16 @@ export const BookContainer = styled.div`
   }
 
   div:last-child {
-    margin-bottom: 6rem;
+    margin-bottom: 3rem;
   }
+`;
+
+export const ButtonLoadMore = styled.button`
+  width: 100%;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  color: #fff;
+  height: 3rem;
+  margin-bottom: 6.5rem;
+  background: ${({ theme }) => theme.colors.backgroundButton};
 `;
